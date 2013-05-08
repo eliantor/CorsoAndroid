@@ -15,5 +15,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/submit"/>
+    <Button android:id="@+id/btn_implicit_intent"
+        android:text="View an URL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
 
 </LinearLayout>
