@@ -32,6 +32,8 @@
         <activity android:name="me.eto.helloworld.HelloResultActivity">
             
         </activity>
+        <activity android:name="me.eto.helloworld.ShowNameActivity"/>
+        <activity android:name="me.eto.helloworld.EditNameActivity"/>
     </application>
 
 </manifest>

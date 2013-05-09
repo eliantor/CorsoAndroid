@@ -13,6 +13,8 @@ public class MainActivity extends Activity implements OnClickListener{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.main_activity);
 		findViewById(R.id.btn_first_sample).setOnClickListener(this);
+
+		findViewById(R.id.btn_activity_results).setOnClickListener(this);
 		findViewById(R.id.btn_second_sample).setOnClickListener(this);
 		
 	}
@@ -23,6 +25,9 @@ public class MainActivity extends Activity implements OnClickListener{
 		switch (v.getId()) {
 		case R.id.btn_first_sample:
 			clazz = HelloActivity.class;
+			break;
+		case R.id.btn_activity_results:
+			clazz= ShowNameActivity.class;
 			break;
 		case R.id.btn_second_sample:
 			clazz = null;

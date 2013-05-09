@@ -13,6 +13,11 @@
             android:text="@string/activities"/>
         <Button android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:id="@+id/btn_activity_results"
+            android:text="Activity Results"/>
+        
+        <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:id="@+id/btn_second_sample"
             android:text="@string/lists"/>
         
