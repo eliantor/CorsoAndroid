@@ -14,7 +14,7 @@ public class TodoListActivity extends FragmentActivity
 	implements OnTodoItemAddedListener,
 			   TodoDataProvider{
 	private final static String MEMORY_TAG = "MEMORY";
-	private List<Todo> mTodoList;
+//	private List<Todo> mTodoList;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);

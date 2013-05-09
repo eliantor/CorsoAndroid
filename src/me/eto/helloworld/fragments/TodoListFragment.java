@@ -13,7 +13,6 @@ import android.widget.ListView;
 
 public class TodoListFragment extends Fragment{
 
-	
 	public static interface TodoDataProvider{
 		public List<Todo> getTodos();
 	}
@@ -29,7 +28,6 @@ public class TodoListFragment extends Fragment{
 			mProvider = (TodoDataProvider)activity;
 		}
 	}
-	
 	
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,

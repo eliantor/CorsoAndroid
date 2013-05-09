@@ -1,12 +1,15 @@
 package me.eto.helloworld;
 
 import me.eto.helloworld.fragments.TodoListActivity;
+import me.eto.helloworld.fragments.dynamicui.FragmentSwitcher;
 import me.eto.helloworld.list.NamesListsActivity;
 import android.app.Activity;
+import android.app.Application;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener{
 
@@ -18,7 +21,10 @@ public class MainActivity extends Activity implements OnClickListener{
 		findViewById(R.id.btn_activity_results).setOnClickListener(this);
 		findViewById(R.id.btn_second_sample).setOnClickListener(this);
 		findViewById(R.id.btn_fragments1).setOnClickListener(this);
-		
+		findViewById(R.id.btn_fragments2).setOnClickListener(this);
+		Application application = getApplication();
+		App app = (App)application;
+		Toast.makeText(this, "YEEEE", Toast.LENGTH_SHORT).show();
 	}
 
 	@Override
@@ -36,6 +42,9 @@ public class MainActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.btn_fragments1:
 			clazz = TodoListActivity.class;
+			break;
+		case R.id.btn_fragments2:
+			clazz = FragmentSwitcher.class;
 			break;
 		default:
 			clazz = null;
