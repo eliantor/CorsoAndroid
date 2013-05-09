@@ -69,6 +69,7 @@ public class HelloActivity extends Activity implements OnClickListener{
 		}
 	}
 
+	@SuppressWarnings("unused")
 	private void startGoogle() {
 		Intent intent = new Intent(Intent.ACTION_VIEW,Uri.parse("http://www.google.com"));
 		startActivity(intent);
