@@ -1,5 +1,6 @@
 package me.eto.helloworld;
 
+import me.eto.helloworld.fragments.TodoListActivity;
 import me.eto.helloworld.list.NamesListsActivity;
 import android.app.Activity;
 import android.content.Intent;
@@ -16,6 +17,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		findViewById(R.id.btn_first_sample).setOnClickListener(this);
 		findViewById(R.id.btn_activity_results).setOnClickListener(this);
 		findViewById(R.id.btn_second_sample).setOnClickListener(this);
+		findViewById(R.id.btn_fragments1).setOnClickListener(this);
 		
 	}
 
@@ -31,6 +33,9 @@ public class MainActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.btn_second_sample:
 			clazz = NamesListsActivity.class;
+			break;
+		case R.id.btn_fragments1:
+			clazz = TodoListActivity.class;
 			break;
 		default:
 			clazz = null;

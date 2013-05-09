@@ -20,7 +20,10 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_second_sample"
             android:text="@string/lists"/>
-        
+        <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_fragments1"
+            android:text="Fragments1"/>
         
     </LinearLayout>
     
