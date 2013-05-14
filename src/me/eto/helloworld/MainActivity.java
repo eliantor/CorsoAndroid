@@ -5,6 +5,7 @@ import me.eto.helloworld.async.SimpleMessageHandlerActivity;
 import me.eto.helloworld.fragments.TodoListActivity;
 import me.eto.helloworld.fragments.dynamicui.FragmentSwitcher;
 import me.eto.helloworld.list.NamesListsActivity;
+import me.eto.helloworld.services.SampleDownloadingActivity2;
 import me.eto.helloworld.services.ServiceClientActivity;
 import android.app.Activity;
 import android.app.Application;
@@ -29,6 +30,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		findViewById(R.id.btn_async).setOnClickListener(this);
 		findViewById(R.id.btn_handlers).setOnClickListener(this);
 		findViewById(R.id.btn_services).setOnClickListener(this);
+		findViewById(R.id.btn_downloading).setOnClickListener(this);
 		Application application = getApplication();
 		App app = (App)application;
 		Toast.makeText(this, "YEEEE", Toast.LENGTH_SHORT).show();
@@ -61,6 +63,9 @@ public class MainActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.btn_services:
 			clazz = ServiceClientActivity.class;
+			break;
+		case R.id.btn_downloading:
+			clazz = SampleDownloadingActivity2.class;
 			break;
 		default:
 			clazz = null;

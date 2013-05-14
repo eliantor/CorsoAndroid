@@ -7,6 +7,9 @@
         android:minSdkVersion="9"
         android:targetSdkVersion="17" />
     
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
+    
     <application
         android:name="me.eto.helloworld.App"
         android:allowBackup="true"
@@ -44,8 +47,18 @@
     	
     	<service android:name="me.eto.helloworld.services.MyService"
     	    android:exported="false">
-    	    
     	</service>
-    </application>
+    	
+    	<!-- <receiver android:name="me.eto.helloworld.receivers.NetworkStateReceiver">
+    	    <intent-filter>
+    	        <action android:name="android.net.wifi.STATE_CHANGE"/>
+    	    </intent-filter>
+    	</receiver>
+    	 -->
+    	 <service android:name="me.eto.helloworld.services.SimpleIntentService"></service>
+ 		<activity android:name="me.eto.helloworld.services.SampleDownloadingActivity"></activity>
+ 				<activity android:name="me.eto.helloworld.services.SampleDownloadingActivity2"></activity>
+ 
+ 		</application>
 
 </manifest>
