@@ -38,6 +38,14 @@
         <activity android:name="me.eto.helloworld.list.NamesListsActivity"/>
         <activity android:name="me.eto.helloworld.fragments.TodoListActivity"/>
         <activity android:name="me.eto.helloworld.fragments.dynamicui.FragmentSwitcher"/>
+   		<activity android:name="me.eto.helloworld.async.AsyncActivity"/>
+   		<activity android:name="me.eto.helloworld.async.SimpleMessageHandlerActivity"/>
+    	<activity android:name="me.eto.helloworld.services.ServiceClientActivity"></activity>
+    	
+    	<service android:name="me.eto.helloworld.services.MyService"
+    	    android:exported="false">
+    	    
+    	</service>
     </application>
 
 </manifest>

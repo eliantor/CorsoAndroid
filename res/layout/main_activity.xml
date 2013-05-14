@@ -28,6 +28,18 @@
             android:layout_height="wrap_content"
             android:id="@+id/btn_fragments2"
             android:text="Dynamic Fragments"/>
+         <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_async"
+            android:text="Async"/>
+         <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_handlers"
+            android:text="Simple Handlers"/>
+         <Button android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_services"
+            android:text="Simple Handlers"/>
     </LinearLayout>
     
 

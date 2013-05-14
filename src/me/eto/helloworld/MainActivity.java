@@ -1,8 +1,11 @@
 package me.eto.helloworld;
 
+import me.eto.helloworld.async.AsyncActivity;
+import me.eto.helloworld.async.SimpleMessageHandlerActivity;
 import me.eto.helloworld.fragments.TodoListActivity;
 import me.eto.helloworld.fragments.dynamicui.FragmentSwitcher;
 import me.eto.helloworld.list.NamesListsActivity;
+import me.eto.helloworld.services.ServiceClientActivity;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
@@ -22,6 +25,10 @@ public class MainActivity extends Activity implements OnClickListener{
 		findViewById(R.id.btn_second_sample).setOnClickListener(this);
 		findViewById(R.id.btn_fragments1).setOnClickListener(this);
 		findViewById(R.id.btn_fragments2).setOnClickListener(this);
+
+		findViewById(R.id.btn_async).setOnClickListener(this);
+		findViewById(R.id.btn_handlers).setOnClickListener(this);
+		findViewById(R.id.btn_services).setOnClickListener(this);
 		Application application = getApplication();
 		App app = (App)application;
 		Toast.makeText(this, "YEEEE", Toast.LENGTH_SHORT).show();
@@ -45,6 +52,15 @@ public class MainActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.btn_fragments2:
 			clazz = FragmentSwitcher.class;
+			break;
+		case R.id.btn_async:
+			clazz = AsyncActivity.class;
+			break;
+		case R.id.btn_handlers:
+			clazz = SimpleMessageHandlerActivity.class;
+			break;
+		case R.id.btn_services:
+			clazz = ServiceClientActivity.class;
 			break;
 		default:
 			clazz = null;

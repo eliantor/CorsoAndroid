@@ -23,6 +23,7 @@ public class NamesListsActivity extends Activity implements OnItemClickListener,
 		mRand = new Random();
 		setContentView(R.layout.names_activity);
 		mListView = (ListView)findViewById(R.id.lv_names);
+
 		mNamesAdapter = new NamesAdapter(this, Data.getDataList());
 		mListView.setAdapter(mNamesAdapter);
 		mListView.setOnItemClickListener(this);
