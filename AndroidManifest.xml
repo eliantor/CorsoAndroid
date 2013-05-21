@@ -8,8 +8,10 @@
         android:targetSdkVersion="17" />
     
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-
-    
+	<uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"
+	    />
+    <permission android:name="me.eto.helloworld.READ_FEEDS"
+        android:protectionLevel="normal"></permission>
     <application
         android:name="me.eto.helloworld.App"
         android:allowBackup="true"
@@ -33,7 +35,8 @@
                 <data android:scheme="mysql"/>
             </intent-filter>
         </activity>
-        <activity android:name="me.eto.helloworld.HelloResultActivity">
+        <activity android:name="me.eto.helloworld.HelloResultActivity"
+            >
             
         </activity>
         <activity android:name="me.eto.helloworld.ShowNameActivity"/>
@@ -44,6 +47,7 @@
    		<activity android:name="me.eto.helloworld.async.AsyncActivity"/>
    		<activity android:name="me.eto.helloworld.async.SimpleMessageHandlerActivity"/>
     	<activity android:name="me.eto.helloworld.services.ServiceClientActivity"></activity>
+    	<activity android:name="me.eto.helloworld.storage.StorageActivity"></activity>
     	
     	<service android:name="me.eto.helloworld.services.MyService"
     	    android:exported="false">
@@ -59,6 +63,10 @@
  		<activity android:name="me.eto.helloworld.services.SampleDownloadingActivity"></activity>
  				<activity android:name="me.eto.helloworld.services.SampleDownloadingActivity2"></activity>
  
+ 				<provider android:name="me.eto.helloworld.storage.FeedProvider"
+ 				    android:authorities="me.eto.helloworld.provider"
+ 				    android:grantUriPermissions="true">
+ 				</provider>
  		</application>
 
 </manifest>

@@ -7,6 +7,7 @@ import me.eto.helloworld.fragments.dynamicui.FragmentSwitcher;
 import me.eto.helloworld.list.NamesListsActivity;
 import me.eto.helloworld.services.SampleDownloadingActivity2;
 import me.eto.helloworld.services.ServiceClientActivity;
+import me.eto.helloworld.storage.StorageActivity;
 import android.app.Activity;
 import android.app.Application;
 import android.content.Intent;
@@ -17,6 +18,8 @@ import android.widget.Toast;
 
 public class MainActivity extends Activity implements OnClickListener{
 
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -31,6 +34,7 @@ public class MainActivity extends Activity implements OnClickListener{
 		findViewById(R.id.btn_handlers).setOnClickListener(this);
 		findViewById(R.id.btn_services).setOnClickListener(this);
 		findViewById(R.id.btn_downloading).setOnClickListener(this);
+		findViewById(R.id.btn_storage).setOnClickListener(this);
 		Application application = getApplication();
 		App app = (App)application;
 		Toast.makeText(this, "YEEEE", Toast.LENGTH_SHORT).show();
@@ -66,6 +70,9 @@ public class MainActivity extends Activity implements OnClickListener{
 			break;
 		case R.id.btn_downloading:
 			clazz = SampleDownloadingActivity2.class;
+			break;
+		case R.id.btn_storage:
+			clazz = StorageActivity.class;
 			break;
 		default:
 			clazz = null;
